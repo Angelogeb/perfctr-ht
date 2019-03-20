@@ -1,0 +1,70 @@
+--------------------------------------------------------------------------------
+CPU name:	Intel(R) Core(TM) i7-8750H CPU @ 2.20GHz
+CPU type:	Intel Coffeelake processor
+CPU clock:	2.21 GHz
+--------------------------------------------------------------------------------
+# Cores: 0
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|Used cycles ratio [%]|Unused cycles ratio [%]|Avg stall duration [cycles]
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|L3 load bandwidth [MBytes/s]|L3 load data volume [GBytes]|L3 evict bandwidth [MBytes/s]|L3 evict data volume [GBytes]|L3 bandwidth [MBytes/s]|L3 data volume [GBytes]
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|Load to store ratio
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|Packed SP MFLOP/s|Packed DP MFLOP/s
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|L2 request rate|L2 miss rate|L2 miss ratio
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|Cycles without execution [%]|Cycles without execution due to L1D [%]|Cycles without execution due to L2 [%]|Cycles without execution due to memory loads [%]
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|L1 ITLB misses|L1 ITLB miss rate|L1 ITLB miss duration [Cyc]
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|Memory load bandwidth [MBytes/s]|Memory load data volume [GBytes]|Memory evict bandwidth [MBytes/s]|Memory evict data volume [GBytes]|Memory bandwidth [MBytes/s]|Memory data volume [GBytes]
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|Energy [J]|Power [W]|Energy DRAM [J]|Power DRAM [W]|DP MFLOP/s|AVX DP MFLOP/s|Packed MUOPS/s|Scalar MUOPS/s|Memory load bandwidth [MBytes/s]|Memory load data volume [GBytes]|Memory evict bandwidth [MBytes/s]|Memory evict data volume [GBytes]|Memory bandwidth [MBytes/s]|Memory data volume [GBytes]|Operational intensity
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|DP MFLOP/s|AVX DP MFLOP/s|Packed MUOPS/s|Scalar MUOPS/s|Vectorization ratio
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|Issued UOPs|Executed UOPs|Retired UOPs
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|L1 DTLB load misses|L1 DTLB load miss rate|L1 DTLB load miss duration [Cyc]|L1 DTLB store misses|L1 DTLB store miss rate|L1 DTLB store miss duration [Cyc]
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|Uncore Clock [MHz]|CPI|Energy [J]|Power [W]|Energy DRAM [J]|Power DRAM [W]
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|L2D load bandwidth [MBytes/s]|L2D load data volume [GBytes]|L2D evict bandwidth [MBytes/s]|L2D evict data volume [GBytes]|L2 bandwidth [MBytes/s]|L2 data volume [GBytes]
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|Energy [J]|Power [W]|Energy DRAM [J]|Power DRAM [W]|SP MFLOP/s|AVX SP MFLOP/s|Packed MUOPS/s|Scalar MUOPS/s|Memory load bandwidth [MBytes/s]|Memory load data volume [GBytes]|Memory evict bandwidth [MBytes/s]|Memory evict data volume [GBytes]|Memory bandwidth [MBytes/s]|Memory data volume [GBytes]|Operational intensity
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|Temperature [C]|Energy [J]|Power [W]|Energy PP0 [J]|Power PP0 [W]|Energy PP1 [J]|Power PP1 [W]|Energy DRAM [J]|Power DRAM [W]
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|L1I request rate|L1I miss rate|L1I miss ratio|L1I stalls|L1I stall rate
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|Branch rate|Branch misprediction rate|Branch misprediction ratio|Instructions per branch
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|Avg. recovery duration
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|Number of divide ops|Avg. divide unit usage duration
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|Used cycles ratio [%]|Unused cycles ratio [%]|Avg stall duration [cycles]
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|L3 request rate|L3 miss rate|L3 miss ratio
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|SP MFLOP/s|AVX SP MFLOP/s|Packed MUOPS/s|Scalar MUOPS/s|Vectorization ratio
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|Local LLC false sharing [MByte]|Local LLC false sharing rate
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|IPC|Total Slots|Slots Retired|Fetch Bubbles|Recovery Bubbles|Front End [%]|Speculation [%]|Retiring [%]|Back End [%]
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|Used cycles ratio [%]|Unused cycles ratio [%]|Avg stall duration [cycles]
+# GID|MetricsCount|CpuCount|Total runtime [s]|Runtime (RDTSC) [s]|Runtime unhalted [s]|Clock [MHz]|CPI|Total execution stalls|Stalls caused by L1D misses [%]|Stalls caused by L2 misses [%]|Stalls caused by memory loads [%]|Execution stall rate [%]|Stalls caused by L1D misses rate [%]|Stalls caused by L2 misses rate [%]|Stalls caused by memory loads rate [%]
+Allocate: Process running on core 0 (Domain S0) - Vector length 2000/8000 Offset 0 Alignment 1024
+Allocate: Process running on core 0 (Domain S0) - Vector length 2000/8000 Offset 0 Alignment 1024
+--------------------------------------------------------------------------------
+LIKWID MICRO BENCHMARK
+Test: ddot_sp_avx
+--------------------------------------------------------------------------------
+Using 1 work groups
+Using 1 threads
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+=========== Threads started
+Group: 0 Thread 0 Global Thread 0 running on core 0 - Vector length 2000 Offset 0
+=========== Threads finished
+--------------------------------------------------------------------------------
+Cycles:			115643293708
+CPU Clock:		2207987430
+Cycle Clock:		2207987430
+Time:			5.237498e+01 sec
+Iterations:		75000000
+Iterations per thread:	75000000
+Inner loop executions:	125
+Size (Byte):		16000
+Size per thread:	16000
+Number of Flops:	300000000000
+MFlops/s:		5727.93
+Data volume (Byte):	1200000000000
+MByte/s:		22911.70
+Cycles per update:	0.770955
+Cycles per cacheline:	12.335285
+Loads per update:	2
+Stores per update:	0
+Load bytes per element:	8
+Store bytes per elem.:	0
+Instructions:		84375000018
+UOPs:			93750000000
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
