@@ -2,6 +2,8 @@ import argparse
 
 import matplotlib.pyplot as plt
 
+from pathlib import Path
+
 GROUP_STRINGS = [
     "UOPS_RETIRE",
     "L3",
@@ -35,18 +37,16 @@ GROUP_STRINGS = [
 
 START_HEADER = 46
 
-def get_n_cores(header_first):
-    start = header_first.find(":")
-    return len(header_first[start + 1:].strip().split("|"))
 
-def get_values(file_name, group, index, n_cores):
+def get_values(file_name, group, index):
     res = []
     with open(file_name) as f:
         for line in f:
             line = line.strip().split(" ")
             if line[0] != str(group): continue
+            n_cores = int(line[2])
             vals = []
-            for i in range(n_cores):
+            for i in range(1):
                 val = line[4 + n_cores * index + i]
                 if val == '-': val = 0
                 vals.append(float(val))
@@ -69,8 +69,6 @@ if __name__ == "__main__":
     with open(args.file[0] + ".header") as f:
         header = f.readlines()
 
-    n_cores = get_n_cores(header[0].strip())
-
     group_metrics = header[args.group].strip()[START_HEADER:]
 
     if not args.metric:
@@ -82,11 +80,13 @@ if __name__ == "__main__":
     metric_index = group_metrics.index(args.metric)
 
     timelines = [
-        get_values(f + ".stderr", args.group, metric_index, n_cores)
+        get_values(f + ".stderr", args.group, metric_index)
         for f in args.file
     ]
 
-    for t in timelines:
-        plt.plot(t)
+    for t, f in zip(timelines, args.file):
+        plt.plot(t, label=Path(f).name)
 
+    plt.ylabel(args.metric)
+    plt.legend()
     plt.show()
