@@ -18,10 +18,10 @@ Group: 0 Thread 0 Global Thread 0 running on core 0 - Vector length 31248384 Off
 Group: 0 Thread 1 Global Thread 1 running on core 6 - Vector length 31248384 Offset 31248384
 =========== Threads finished
 --------------------------------------------------------------------------------
-Cycles:			77168530976
-CPU Clock:		2206869513
-Cycle Clock:		2206869513
-Time:			3.496742e+01 sec
+Cycles:			79008697424
+CPU Clock:		2208171189
+Cycle Clock:		2208171189
+Time:			3.578015e+01 sec
 Iterations:		100000
 Iterations per thread:	50000
 Inner loop executions:	7629
@@ -30,9 +30,9 @@ Size per thread:	499974144
 Number of Flops:	0
 MFlops/s:		0.00
 Data volume (Byte):	49997414400000
-MByte/s:		1429828.56
-Cycles per update:	0.024695
-Cycles per cacheline:	0.197562
+MByte/s:		1397350.59
+Cycles per update:	0.025284
+Cycles per cacheline:	0.202273
 Loads per update:	1
 Stores per update:	1
 Load bytes per element:	8
