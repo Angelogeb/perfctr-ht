@@ -30,37 +30,42 @@ for f in 1.0 1.5 2.2; do
 
     echo "$(date): FPU core bound $t - $f"
     $command $cpus ./bin/likwid-bench -t ddot_sp -w S0:16kB:$t -i 15000000 > "data/FPU-core-$t-$f.stdout" 2> "data/FPU-core-$t-$f.stderr"
-    echo $(ps -e | rg likwid)
+    echo $(ps -e | grep likwid)
     wait_if_skipped
 
     echo "$(date): FPU mem bound $t - $f"
     $command $cpus ./bin/likwid-bench -t ddot_sp -w S0:1GB:$t -i 200 > "data/FPU-mem-$t-$f.stdout" 2> "data/FPU-mem-$t-$f.stderr"
-    echo $(ps -e | rg likwid)
+    echo $(ps -e | grep likwid)
     wait_if_skipped
 
     echo "$(date): Copy cache $t - $f"
     $command $cpus ./bin/likwid-bench -t copy -w S0:16kB:$t -i 30000000 > "data/Copy-cache-$t-$f.stdout" 2> "data/Copy-cache-$t-$f.stderr"
-    echo $(ps -e | rg likwid)
+    echo $(ps -e | grep likwid)
     wait_if_skipped
 
     echo "$(date): Copy mem $t - $f"
     $command $cpus ./bin/likwid-bench -t copy -w S0:1GB:$t -i 250 > "data/Copy-mem-$t-$f.stdout" 2> "data/Copy-mem-$t-$f.stderr"
-    echo $(ps -e | rg likwid)
+    echo $(ps -e | grep likwid)
     wait_if_skipped
 
     echo "$(date): ALU core bound $t - $f"
     $command $cpus ./bin/likwid-bench -t sum_int -w S0:16kB:$t -i 10000000 > "data/ALU-core-$t-$f.stdout" 2> "data/ALU-core-$t-$f.stderr"
-    echo $(ps -e | rg likwid)
+    echo $(ps -e | grep likwid)
     wait_if_skipped
 
     echo "$(date): ALU mem bound $t - $f"
     $command $cpus ./bin/likwid-bench -t sum_int -w S0:1GB:$t -i 150 > "data/ALU-mem-$t-$f.stdout" 2> "data/ALU-mem-$t-$f.stderr"
-    echo $(ps -e | rg likwid)
+    echo $(ps -e | grep likwid)
     wait_if_skipped
 
     echo "$(date): AVX $t - $f"
     $command $cpus ./bin/likwid-bench -t ddot_sp_avx -w S0:16kB:$t -i 75000000 > "data/AVX-cache-$t-$f.stdout" 2> "data/AVX-cache-$t-$f.stderr"
-    echo $(ps -e | rg likwid)
+    echo $(ps -e | grep likwid)
+    wait_if_skipped
+
+    echo "$(date): Scattered $t - $f"
+    $command $cpus ./bin/likwid-bench -t copy_scattered -w S0:1GB:$t -i 50000  > "data/Scattered-$t-$f.stdout" 2> "data/Scattered-$t-$f.stderr"
+    echo $(ps -e | grep likwid)
     wait_if_skipped
 
   done;
