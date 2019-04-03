@@ -55,9 +55,14 @@ def get_field(table_lines, field, type):
     line = table_lines[get_line_indices_starting_with(table_lines, field)[0]]
     line = line.strip(",\n").split(",")
     vals = [float(line[i]) for i in core_idxs]
-    print(vals)
     return aggregations[type](vals)
 
+def get_running_time(file):
+    with open(file) as f:
+        for line in f:
+            if line.startswith("Time"):
+                return eval(line.split("\t")[-1].split(" ")[0])
+    return None
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Plot data")
@@ -87,7 +92,21 @@ if __name__ == "__main__":
 
 
     x = list(range(len(args.file)))
-    plt.bar(x, height=fields, color=[plt.get_cmap("tab20")(i) for i in range(len(args.file))])
-    plt.xticks(x,[Path(file).with_suffix("").name for file in args.file], rotation=45)
+    
+    fig, ax1 = plt.subplots()
+    plt.sca(ax1)
+    plt.bar(x, height=fields, color=[plt.get_cmap("tab20")((i*2 if i
+        < 10 else i*2 + 1) % 20 ) for i in range(len(args.file))])
+    plt.xticks(x,[Path(file).with_suffix("").name for file in args.file],
+            rotation=70)
     plt.ylabel(args.metric)
+
+    times = []
+    for f in args.file:
+        times.append(get_running_time(Path(f).with_suffix(".stdout")))
+
+    ax2 = ax1.twinx()
+    ax2.scatter(x, times, marker='x', color="#000000")
+    ax2.set_ylabel("Running time [s]")
+    ax2.set_ylim(ymin=0)
     plt.show()
