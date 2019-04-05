@@ -1,0 +1,47 @@
+Allocate: Process running on core 0 (Domain S0) - Vector length 124999968/499999872 Offset 0 Alignment 1024
+Allocate: Process running on core 0 (Domain S0) - Vector length 124999968/499999872 Offset 0 Alignment 1024
+--------------------------------------------------------------------------------
+LIKWID MICRO BENCHMARK
+Test: ddot_sp
+--------------------------------------------------------------------------------
+Using 1 work groups
+Using 12 threads
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+=========== Threads started
+Group: 0 Thread 0 Global Thread 0 running on core 0 - Vector length 10416664 Offset 0
+Group: 0 Thread 1 Global Thread 1 running on core 6 - Vector length 10416664 Offset 10416664
+Group: 0 Thread 2 Global Thread 2 running on core 1 - Vector length 10416664 Offset 20833328
+Group: 0 Thread 3 Global Thread 3 running on core 7 - Vector length 10416664 Offset 31249992
+Group: 0 Thread 4 Global Thread 4 running on core 2 - Vector length 10416664 Offset 41666656
+Group: 0 Thread 5 Global Thread 5 running on core 8 - Vector length 10416664 Offset 52083320
+Group: 0 Thread 6 Global Thread 6 running on core 3 - Vector length 10416664 Offset 62499984
+Group: 0 Thread 7 Global Thread 7 running on core 9 - Vector length 10416664 Offset 72916648
+Group: 0 Thread 8 Global Thread 8 running on core 4 - Vector length 10416664 Offset 83333312
+Group: 0 Thread 9 Global Thread 9 running on core 10 - Vector length 10416664 Offset 93749976
+Group: 0 Thread 10 Global Thread 10 running on core 5 - Vector length 10416664 Offset 104166640
+Group: 0 Thread 11 Global Thread 11 running on core 11 - Vector length 10416664 Offset 114583304
+=========== Threads finished
+--------------------------------------------------------------------------------
+Cycles:			25342524632
+CPU Clock:		2207015556
+Cycle Clock:		2207015556
+Time:			1.148271e+01 sec
+Iterations:		2400
+Iterations per thread:	200
+Inner loop executions:	2604166
+Size (Byte):		999999744
+Size per thread:	83333312
+Number of Flops:	49999987200
+MFlops/s:		4354.37
+Data volume (Byte):	199999948800
+MByte/s:		17417.48
+Cycles per update:	1.013701
+Cycles per cacheline:	16.219220
+Loads per update:	2
+Stores per update:	0
+Load bytes per element:	8
+Store bytes per elem.:	0
+Instructions:		93749976020
+UOPs:			112499971200
+--------------------------------------------------------------------------------

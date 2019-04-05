@@ -108,6 +108,6 @@ if __name__ == "__main__":
     ax1.set_ylim(ymin=0)
     ax2 = ax1.twinx()
     ax2.scatter(x, times, marker='x', color="#000000")
-    ax2.set_ylabel("Running time [s]")
+    ax2.set_ylabel("x Running time [s]")
     ax2.set_ylim(ymin=0)
     plt.show()
