@@ -105,6 +105,7 @@ if __name__ == "__main__":
     for f in args.file:
         times.append(get_running_time(Path(f).with_suffix(".stdout")))
 
+    ax1.set_ylim(ymin=0)
     ax2 = ax1.twinx()
     ax2.scatter(x, times, marker='x', color="#000000")
     ax2.set_ylabel("Running time [s]")
