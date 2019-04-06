@@ -1,0 +1,16 @@
+STREAMS 1
+TYPE INT
+FLOPS 0
+BYTES 4
+DESC Integer sum of a vector, only scalar operations
+LOADS 1
+STORES 0
+INSTR_CONST 20
+INSTR_LOOP 7
+UOPS 10
+mov  ebx, 0
+mov  ecx, 0
+LOOP 2
+add    ebx, [STR0 + GPR1 * 4]
+add    ecx, [STR0 + GPR1 * 4 + 4]
+
