@@ -58,7 +58,7 @@ def build_name(pref, thread, ht, freq):
 
 
 if __name__ == "__main__":
-    res, met = get_metrics(Path("data_aggregated/FPU-core-1-HT-1.0.csv"))
+    res, met = get_metrics(Path("data_aggregated/FPU-core-1-HT-1.2.csv"))
 
     print(len(met))
 
