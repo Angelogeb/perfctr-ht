@@ -1,0 +1,36 @@
+Allocate: Process running on core 0 (Domain S0) - Vector length 250000000/1000000000 Offset 0 Alignment 1024
+--------------------------------------------------------------------------------
+LIKWID MICRO BENCHMARK
+Test: sum_int
+--------------------------------------------------------------------------------
+Using 1 work groups
+Using 2 threads
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+=========== Threads started
+Group: 0 Thread 0 Global Thread 0 running on core 0 - Vector length 125000000 Offset 0
+Group: 0 Thread 1 Global Thread 1 running on core 6 - Vector length 125000000 Offset 125000000
+=========== Threads finished
+--------------------------------------------------------------------------------
+Cycles:			170649741108
+CPU Clock:		2206468391
+Cycle Clock:		2206468391
+Time:			7.734067e+01 sec
+Iterations:		1800
+Iterations per thread:	900
+Inner loop executions:	62500000
+Size (Byte):		1000000000
+Size per thread:	500000000
+Number of Flops:	0
+MFlops/s:		0.00
+Data volume (Byte):	900000000000
+MByte/s:		11636.83
+Cycles per update:	0.758443
+Cycles per cacheline:	12.135093
+Loads per update:	1
+Stores per update:	0
+Load bytes per element:	4
+Store bytes per elem.:	0
+Instructions:		787500000020
+UOPs:			1125000000000
+--------------------------------------------------------------------------------

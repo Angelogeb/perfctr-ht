@@ -1,0 +1,48 @@
+Allocate: Process running on core 0 (Domain S0) - Vector length 960/7680 Offset 0 Alignment 512
+Allocate: Process running on core 0 (Domain S0) - Vector length 960/7680 Offset 0 Alignment 512
+--------------------------------------------------------------------------------
+LIKWID MICRO BENCHMARK
+Test: copy
+--------------------------------------------------------------------------------
+Using 1 work groups
+Using 12 threads
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+=========== Threads started
+Group: 0 Thread 0 Global Thread 0 running on core 0 - Vector length 80 Offset 0
+Group: 0 Thread 1 Global Thread 1 running on core 6 - Vector length 80 Offset 80
+Group: 0 Thread 2 Global Thread 2 running on core 1 - Vector length 80 Offset 160
+Group: 0 Thread 3 Global Thread 3 running on core 7 - Vector length 80 Offset 240
+Group: 0 Thread 4 Global Thread 4 running on core 2 - Vector length 80 Offset 320
+Group: 0 Thread 5 Global Thread 5 running on core 8 - Vector length 80 Offset 400
+Group: 0 Thread 6 Global Thread 6 running on core 3 - Vector length 80 Offset 480
+Group: 0 Thread 7 Global Thread 7 running on core 9 - Vector length 80 Offset 560
+Group: 0 Thread 8 Global Thread 8 running on core 4 - Vector length 80 Offset 640
+Group: 0 Thread 9 Global Thread 9 running on core 10 - Vector length 80 Offset 720
+Group: 0 Thread 10 Global Thread 10 running on core 5 - Vector length 80 Offset 800
+Group: 0 Thread 11 Global Thread 11 running on core 11 - Vector length 80 Offset 880
+=========== Threads finished
+--------------------------------------------------------------------------------
+Cycles:			32161340470
+CPU Clock:		2208023160
+Cycle Clock:		2208023160
+Time:			1.456567e+01 sec
+Iterations:		2160000000
+Iterations per thread:	180000000
+Inner loop executions:	20
+Size (Byte):		15360
+Size per thread:	1280
+Number of Flops:	0
+MFlops/s:		0.00
+Data volume (Byte):	2764800000000
+MByte/s:		189816.17
+Cycles per update:	0.186119
+Cycles per cacheline:	1.488951
+Loads per update:	1
+Stores per update:	1
+Load bytes per element:	8
+Store bytes per elem.:	8
+Load/store ratio:	1.00
+Instructions:		475200000016
+UOPs:			604800000000
+--------------------------------------------------------------------------------

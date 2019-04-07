@@ -1,0 +1,46 @@
+Allocate: Process running on core 0 (Domain S0) - Vector length 3984/15936 Offset 0 Alignment 1024
+--------------------------------------------------------------------------------
+LIKWID MICRO BENCHMARK
+Test: sum_int
+--------------------------------------------------------------------------------
+Using 1 work groups
+Using 12 threads
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+=========== Threads started
+Group: 0 Thread 0 Global Thread 0 running on core 0 - Vector length 332 Offset 0
+Group: 0 Thread 1 Global Thread 1 running on core 6 - Vector length 332 Offset 332
+Group: 0 Thread 2 Global Thread 2 running on core 1 - Vector length 332 Offset 664
+Group: 0 Thread 3 Global Thread 3 running on core 7 - Vector length 332 Offset 996
+Group: 0 Thread 4 Global Thread 4 running on core 2 - Vector length 332 Offset 1328
+Group: 0 Thread 5 Global Thread 5 running on core 8 - Vector length 332 Offset 1660
+Group: 0 Thread 6 Global Thread 6 running on core 3 - Vector length 332 Offset 1992
+Group: 0 Thread 7 Global Thread 7 running on core 9 - Vector length 332 Offset 2324
+Group: 0 Thread 8 Global Thread 8 running on core 4 - Vector length 332 Offset 2656
+Group: 0 Thread 9 Global Thread 9 running on core 10 - Vector length 332 Offset 2988
+Group: 0 Thread 10 Global Thread 10 running on core 5 - Vector length 332 Offset 3320
+Group: 0 Thread 11 Global Thread 11 running on core 11 - Vector length 332 Offset 3652
+=========== Threads finished
+--------------------------------------------------------------------------------
+Cycles:			55931602202
+CPU Clock:		2207875768
+Cycle Clock:		2207875768
+Time:			2.533277e+01 sec
+Iterations:		720000000
+Iterations per thread:	60000000
+Inner loop executions:	166
+Size (Byte):		15936
+Size per thread:	1328
+Number of Flops:	0
+MFlops/s:		0.00
+Data volume (Byte):	956160000000
+MByte/s:		37744.00
+Cycles per update:	0.233984
+Cycles per cacheline:	3.743748
+Loads per update:	1
+Stores per update:	0
+Load bytes per element:	4
+Store bytes per elem.:	0
+Instructions:		836640000020
+UOPs:			1195200000000
+--------------------------------------------------------------------------------

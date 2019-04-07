@@ -1,0 +1,38 @@
+Allocate: Process running on core 0 (Domain S0) - Vector length 124999992/499999968 Offset 0 Alignment 1024
+Allocate: Process running on core 0 (Domain S0) - Vector length 124999992/499999968 Offset 0 Alignment 1024
+--------------------------------------------------------------------------------
+LIKWID MICRO BENCHMARK
+Test: ddot_sp
+--------------------------------------------------------------------------------
+Using 1 work groups
+Using 3 threads
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+=========== Threads started
+Group: 0 Thread 0 Global Thread 0 running on core 0 - Vector length 41666664 Offset 0
+Group: 0 Thread 1 Global Thread 1 running on core 1 - Vector length 41666664 Offset 41666664
+Group: 0 Thread 2 Global Thread 2 running on core 2 - Vector length 41666664 Offset 83333328
+=========== Threads finished
+--------------------------------------------------------------------------------
+Cycles:			129454414116
+CPU Clock:		2207972171
+Cycle Clock:		2207972171
+Time:			5.863046e+01 sec
+Iterations:		3600
+Iterations per thread:	1200
+Inner loop executions:	10416666
+Size (Byte):		999999936
+Size per thread:	333333312
+Number of Flops:	299999980800
+MFlops/s:		5116.79
+Data volume (Byte):	1199999923200
+MByte/s:		20467.18
+Cycles per update:	0.863029
+Cycles per cacheline:	13.808472
+Loads per update:	2
+Stores per update:	0
+Load bytes per element:	8
+Store bytes per elem.:	0
+Instructions:		562499964020
+UOPs:			674999956800
+--------------------------------------------------------------------------------

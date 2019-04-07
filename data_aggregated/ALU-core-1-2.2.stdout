@@ -11,25 +11,25 @@ Using 1 threads
 Group: 0 Thread 0 Global Thread 0 running on core 0 - Vector length 4000 Offset 0
 =========== Threads finished
 --------------------------------------------------------------------------------
-Cycles:			32414444846
-CPU Clock:		2207764843
-Cycle Clock:		2207764843
-Time:			1.468202e+01 sec
-Iterations:		10000000
-Iterations per thread:	10000000
+Cycles:			193567220568
+CPU Clock:		2208011684
+Cycle Clock:		2208011684
+Time:			8.766585e+01 sec
+Iterations:		60000000
+Iterations per thread:	60000000
 Inner loop executions:	2000
 Size (Byte):		16000
 Size per thread:	16000
 Number of Flops:	0
 MFlops/s:		0.00
-Data volume (Byte):	160000000000
-MByte/s:		10897.68
-Cycles per update:	0.810361
-Cycles per cacheline:	12.965778
+Data volume (Byte):	960000000000
+MByte/s:		10950.67
+Cycles per update:	0.806530
+Cycles per cacheline:	12.904481
 Loads per update:	1
 Stores per update:	0
 Load bytes per element:	4
 Store bytes per elem.:	0
-Instructions:		140000000020
-UOPs:			200000000000
+Instructions:		840000000020
+UOPs:			1200000000000
 --------------------------------------------------------------------------------

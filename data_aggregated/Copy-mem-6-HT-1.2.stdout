@@ -1,0 +1,48 @@
+Allocate: Process running on core 0 (Domain S0) - Vector length 62499984/499999872 Offset 0 Alignment 512
+Allocate: Process running on core 0 (Domain S0) - Vector length 62499984/499999872 Offset 0 Alignment 512
+--------------------------------------------------------------------------------
+LIKWID MICRO BENCHMARK
+Test: copy
+--------------------------------------------------------------------------------
+Using 1 work groups
+Using 12 threads
+--------------------------------------------------------------------------------
+--------------------------------------------------------------------------------
+=========== Threads started
+Group: 0 Thread 0 Global Thread 0 running on core 0 - Vector length 5208332 Offset 0
+Group: 0 Thread 1 Global Thread 1 running on core 6 - Vector length 5208332 Offset 5208332
+Group: 0 Thread 2 Global Thread 2 running on core 1 - Vector length 5208332 Offset 10416664
+Group: 0 Thread 3 Global Thread 3 running on core 7 - Vector length 5208332 Offset 15624996
+Group: 0 Thread 4 Global Thread 4 running on core 2 - Vector length 5208332 Offset 20833328
+Group: 0 Thread 5 Global Thread 5 running on core 8 - Vector length 5208332 Offset 26041660
+Group: 0 Thread 6 Global Thread 6 running on core 3 - Vector length 5208332 Offset 31249992
+Group: 0 Thread 7 Global Thread 7 running on core 9 - Vector length 5208332 Offset 36458324
+Group: 0 Thread 8 Global Thread 8 running on core 4 - Vector length 5208332 Offset 41666656
+Group: 0 Thread 9 Global Thread 9 running on core 10 - Vector length 5208332 Offset 46874988
+Group: 0 Thread 10 Global Thread 10 running on core 5 - Vector length 5208332 Offset 52083320
+Group: 0 Thread 11 Global Thread 11 running on core 11 - Vector length 5208332 Offset 57291652
+=========== Threads finished
+--------------------------------------------------------------------------------
+Cycles:			236226146138
+CPU Clock:		2208103798
+Cycle Clock:		2208103798
+Time:			1.069815e+02 sec
+Iterations:		18000
+Iterations per thread:	1500
+Inner loop executions:	1302083
+Size (Byte):		999999744
+Size per thread:	83333312
+Number of Flops:	0
+MFlops/s:		0.00
+Data volume (Byte):	1499999616000
+MByte/s:		14021.12
+Cycles per update:	2.519746
+Cycles per cacheline:	20.157970
+Loads per update:	1
+Stores per update:	1
+Load bytes per element:	8
+Store bytes per elem.:	8
+Load/store ratio:	1.00
+Instructions:		257812434016
+UOPs:			328124916000
+--------------------------------------------------------------------------------
