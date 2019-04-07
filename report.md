@@ -96,6 +96,11 @@ used in our setting are:
   * `copy`: Double-precision vector copy, only scalar operations
   * `ddot_sp_avx`: Single-precision dot product of two vectors, optimized for AVX
   * `sum_int`: Custom benchmark similar to `sum` but working on integers
+  * `copy_scattered`: Same as `copy` but accesses at page granularity (4096)
+
+The last two benchmarks (`sum_int` and `copy_scattered`) can be found under
+the `benchmarks/` folder of this repository. Instructions on how to compile
+them in likwid can be found [here.](https://github.com/RRZE-HPC/likwid/wiki/Likwid-Bench#adding-benchmarks)
 
 All benchmarks are run with multiple configurations of number of threads (with or
 without Hyper-Threading), processor frequencies with TurboBoost disabled, working
@@ -103,11 +108,146 @@ set size. The latter is needed in order to emulate *core-bound* executions
 (working set fitting in cache) and *memory-bound* ones.
 
 
+Repository Structure
+--------------------
+
+The repository has two branches: `master` and `aggregated`. The former
+contains under the `data/` folder the profiling of the benchmarks run
+in timeline mode (`-t` flag) while the latter under `data_aggregated/`
+the data of the profiling in wrapper mode (`-T`).
+
+Both folders were genereated through the `bench.sh` file and minor
+variations of it for different number of threads and Hyper Threading
+activation.
+
+
+### `master` Details
+
+#### Data naming convention
+```
+<BenchmarkName>-<#threads>-<freq>.<ext>
+```
+* **#threads**: 1 or 2. When the value is 2, the threads run in the
+  same physical core in Hyper Threading
+
+* **freq**: 1.0, 1.5, 2.2. The smallest frequency is not precise and
+  ranges from 1.0 to 1.28.
+
+* **ext**: stdout, stderr, header. In stderr there is the actual data
+  with one line per group, with groups repeating for each sample.
+  In header can be found the name of the metrics/performance counters
+  in each group.
+  In stdout the total running time of the benchmark and additional info.
+  The output produced by `bench.sh` is not clean therefore such data
+  has been processed through `process_data.py`.
+
+#### Plotting
+
+In order to easily analyze the data `plot_data.py` can be used.
+It is a Python3.6 script which uses the matplotlib library.
+
+##### Usage
+
+```
+usage: plot_data.py [-h] [-g GROUP] [-m METRIC] [-p] file [file ...]
+
+Plot data
+
+positional arguments:
+  file                  Path to the file without extension
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -g GROUP, --group GROUP
+  -m METRIC, --metric METRIC
+  -p, --print-groups
+```
+
+* First choose a file or set of files to work on
+* Run `python plot_data.py -p <files>` to see which groups are available
+  for analysis
+* Choose one group and its id to plot
+* Run `python plot_data.py -g <groupId> <files>`
+* Choose the name of one of the metrics of the group printed out
+* Run `python plot_data.py -g <groupId> -m "<metricName>" <files>`
+* **Note**: Escape the metric name with double quotes
+
+
+```bash
+$ python plot_data.py -g 16 -m "Power DRAM [W]" data/ALU-core-1-1.0 data/ALU-core-1-1.5 data/ALU-core-1-2.2 data/Copy-mem-2-2.2 data/ALU-mem-1-1.0 data/ALU-mem-1-1.5 data/ALU-mem-1-2.2
+```
+![](imgs/master_plot.png)
+
+
+### `aggregated` Details
+
+#### Data naming convention
+```
+<BenchmarkName>-<#threads><-HT>-<freq>.<ext>
+```
+
+* **#threads**: 1, 3, 6. Number of physical cores used in the benchmark.
+* **-HT**: present or not. If present then in each physical cores there
+  were two threads running in Hyper Threading otherwise just one
+* **freq**: 1.2, 1.7, 2.2. Maximum frequency available for the benchmark.
+  In this case the lowest frequency is precise
+* **ext**: csv or stdout. In the csv there are the values of the metrics
+  of the benchmark while stdout contains the running time and additional
+  details
+
+
+#### Plotting
+
+In order to easily analyze the data `histogram.py` can be used.
+It is a Python3.6 script which uses the matplotlib library.
+
+##### Usage
+
+```
+usage: histogram.py [-h] [-g GROUP] [-m METRIC] [-t TYPE] [-p]
+                    file [file ...]
+
+Plot data
+
+positional arguments:
+  file                  Path to the file without extension
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -g GROUP, --group GROUP
+  -m METRIC, --metric METRIC
+  -t TYPE, --type TYPE
+  -p, --print-groups
+```
+
+* First choose a file or set of files to work on
+* Run `python histogram.py -p <files>` to see which groups are available
+  for analysis
+* Choose one group and its id to plot
+* Run `python histogram.py -g <groupId> <files>`
+* Choose the name of one of the metrics of the group printed out
+  and additionally choose also the type of aggregation across threads
+  given that there are one value of the metric for each thread.
+  Possible values are `avg`, `sum`, `any`, `min`, `max`.
+* Run `python plot_data.py -g <groupId> -m "<metricName>"  -t <type> <files>`
+* **Note**: Escape the metric name with double quotes and when passing
+  the file names remove their extension
+
+
+```bash
+$ python histogram.py -g 1 -t avg -m "Avg stall duration [cycles]" data_aggregated/Scattered*.csv data_aggregated/ALU-core*.csv
+```
+
+![](imgs/aggregated_plot.png)
+
+The `x`s represent the running time of the benchmark (right y axis) while
+the bars represent the metric (left y axis).
+
 Details
 -------
 
-The tests were run on a Dell XPS 9750 with i7-8750H. With TurboBoost disabled
-the available frequencies range from 1.0 to 2.2 GHz. There is one socket with
+The tests were run on a Dell XPS 9750 with i7-8750H while charging. With TurboBoost disabled
+the available frequencies range from 1.2 to 2.2 GHz. There is one socket with
 6 Physical cores and 12 Logical cores (in Hyper Threading).
 
 [PAPI]: http://icl.utk.edu/papi/
