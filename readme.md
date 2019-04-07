@@ -1,6 +1,9 @@
-% Performance counters analysis for Hyper-Threading
-% Beatrice Bevilacqua, Anxhelo Xhebraj
-% March 2019
+---
+author:
+- 'Beatrice Bevilacqua, Anxhelo Xhebraj'
+date: March 2019
+title: 'Performance counters analysis for Hyper-Threading'
+---
 
 Performance counters analysis for Hyper-Threading
 =================================================
@@ -227,7 +230,7 @@ optional arguments:
 * Run `python histogram.py -g <groupId> <files>`
 * Choose the name of one of the metrics of the group printed out
   and additionally choose also the type of aggregation across threads
-  given that there are one value of the metric for each thread.
+  given that there is one value of the metric for each thread.
   Possible values are `avg`, `sum`, `any`, `min`, `max`.
 * Run `python plot_data.py -g <groupId> -m "<metricName>"  -t <type> <files>`
 * **Note**: Escape the metric name with double quotes and when passing
@@ -242,6 +245,28 @@ $ python histogram.py -g 1 -t avg -m "Avg stall duration [cycles]" data_aggregat
 
 The `x`s represent the running time of the benchmark (right y axis) while
 the bars represent the metric (left y axis).
+
+
+#### `correlations`
+
+Additionally [Pearson Correlation Coefficients] for each varying input
+i.e. #Threads, Frequencies and HT have been computed through `pearson_corr.py`
+and can be found in `correlations/`.
+
+##### Naming Convention
+
+* `<BenchmarkName>-freq.csv`: for each combination of #threads and HT
+  the correlation coefficient between the three values of the
+  frequency and the values of the metrics at those frequencies.
+
+* `<BenchmarkName>-HT.csv`: for each combination of #threads and frequencies
+  the correlation coefficient between the two values of the
+  HT and the values of the metrics with HT enabled or disabled.
+
+* `<BenchmarkName>-threads.csv`: for each combination of frequencies and HT
+  the correlation coefficient between the three values of the
+  #threads and the values of the metrics at those #threads.
+
 
 Details
 -------
@@ -261,3 +286,5 @@ the available frequencies range from 1.2 to 2.2 GHz. There is one socket with
 [perf]: http://www.brendangregg.com/perf.html
 
 [pmu-tools]: https://github.com/andikleen/pmu-tools
+
+[Pearson Correlation Coefficients]: https://en.wikipedia.org/wiki/Pearson_correlation_coefficient
