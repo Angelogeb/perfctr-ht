@@ -267,6 +267,13 @@ and can be found in `correlations/`.
   the correlation coefficient between the three values of the
   #threads and the values of the metrics at those #threads.
 
+##### Plotting
+
+```bash
+$ python plot_corr.py correlations/Scattered-mem-freq.csv
+```
+
+![](imgs/pearson_plot.png)
 
 Details
 -------
